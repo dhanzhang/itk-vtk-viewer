@@ -5,7 +5,7 @@ import vtkURLExtract from 'vtk.js/Sources/Common/Core/URLExtract';
 import fetchBinaryContent from './fetchBinaryContent';
 import processFiles from './processFiles';
 import userInterface from './userInterface';
-import createFileDragAndDrop from './userInterface/createFileDragAndDrop';
+import createFileDragAndDrop    from  './userInterface/createFileDragAndDrop';
 import style from './userInterface/ItkVtkViewer.mcss';
 
 let doNotInitViewers = false;
@@ -13,6 +13,8 @@ let doNotInitViewers = false;
 export function createViewerFromLocalFiles(container) {
   doNotInitViewers = true;
   createFileDragAndDrop(container, processFiles);
+
+
 }
 
 export function createViewerFromUrl(el, url, use2D = false) {
